@@ -1,4 +1,6 @@
 var http = require("http");
+var url = require("url");
+var querystring = require("querystring");
 
 function onRequest(request, response) {
   response.writeHead(200, {"Content-Type": "text/plain"});
