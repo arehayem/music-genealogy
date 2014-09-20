@@ -30,12 +30,14 @@ function results(response, postData) {
 	request('http://api.spotify.com/v1/search?q='+querystring.parse(postData).text+'&type=artist', function (error, res, body) {
 		if (!error && res.statusCode == 200) {
 			console.log("Request to Spotify's API succeeded.");
-			console.log(body);
+			var obj = JSON.parse(body);
+			response.write(JSON.stringify(obj.artists.items[0]));
+			response.end();
 		} else {
 			console.log("Request to Spotify's API failed.");
+			response.end();
 		}
 	})
-	response.end();
 }
 
 function testmongo(response) {
