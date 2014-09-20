@@ -1,6 +1,6 @@
 var exec = require("child_process").exec;
 
-function start(response) {
+function search(response) {
 	console.log("Request handler 'start' was called.")
 
 	exec("ls -lah", function(error, stdout, stderr) {
@@ -10,12 +10,4 @@ function start(response) {
 	});
 }
 
-function upload(response) {
-	console.log("Request handler 'upload' was called.")
-	response.writeHead(200, {"Content-Type": "text/plain"});
-	response.write("Hello Upload");
-	response.end();
-}
-
-exports.start = start;
-exports.upload = upload;
+exports.search = search;
