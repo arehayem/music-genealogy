@@ -1,7 +1,8 @@
 var exec = require("child_process").exec;
+var querystring = require("querystring");
 
-function search(response) {
-	console.log("Request handler 'start' was called.")
+function search(response, postData) {
+	console.log("Request handler 'search' was called.")
 
 	var body = '<html>'+
 		'<head>'+
@@ -20,9 +21,12 @@ function search(response) {
 	response.end();
 }
 
-function results(response) {
-	response.writeHead(200, {"Content-Type": "text/html"});
-	response.write('ok');
+function results(response, postData) {
+	console.log("Request handler 'results' was called.");
+	response.writeHead(200, {"Content-Type": "text/plain"});
+	response.write("You've sent: " +
+	querystring.parse(postData).text);
+
 	response.end();
 }
 
