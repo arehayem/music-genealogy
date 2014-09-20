@@ -48,6 +48,7 @@ function testmongo(response) {
 		} );
 	});
 	response.write("Hi you're testing mongo");
+	response.end();
 }
 
 exports.search = search;
