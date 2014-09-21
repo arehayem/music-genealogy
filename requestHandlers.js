@@ -31,12 +31,54 @@ function results(response, postData) {
 		if (!error && res.statusCode == 200) {
 			console.log("Request to Spotify's API succeeded.");
 			var obj = JSON.parse(body);
-			response.write(JSON.stringify(obj.artists.items[0]));
-			response.end();
+			var final_list = JSON.stringify(obj.artists.items[0].id);
+			request('http://api.spotify.com/v1/search?q='+querystring.parse(postData).text+'&type=artist', function (error, res, body) {
+				if (!error && res.statusCode == 200) {
+					console.log("Request to Spotify's API succeeded.");
+					obj = JSON.parse(body);
+					final_list = JSON.stringify(obj.artists.items[0].id);
+					request('http://api.spotify.com/v1/search?q='+querystring.parse(postData).text+'&type=artist', function (error, res, body) {
+						if (!error && res.statusCode == 200) {
+							console.log("Request to Spotify's API succeeded.");
+							obj = JSON.parse(body);
+							final_list = JSON.stringify(obj.artists.items[0].id);
+							request('http://api.spotify.com/v1/search?q='+querystring.parse(postData).text+'&type=artist', function (error, res, body) {
+								if (!error && res.statusCode == 200) {
+									console.log("Request to Spotify's API succeeded.");
+									obj = JSON.parse(body);
+									final_list = JSON.stringify(obj.artists.items[0].id);
+									request('http://api.spotify.com/v1/search?q='+querystring.parse(postData).text+'&type=artist', function (error, res, body) {
+										if (!error && res.statusCode == 200) {
+											console.log("Request to Spotify's API succeeded.");
+											obj = JSON.parse(body);
+											final_list = JSON.stringify(obj.artists.items[0].id);
+											response.write(final_list);
+											response.end();
+										} else {
+											console.log("Request to Spotify's API failed.");
+											response.end();
+										}
+									})
+								} else {
+									console.log("Request to Spotify's API failed.");
+									response.end();
+								}
+							})
+						} else {
+							console.log("Request to Spotify's API failed.");
+							response.end();
+						}
+					})
+				} else {
+					console.log("Request to Spotify's API failed.");
+					response.end();
+				}
+			})
 		} else {
 			console.log("Request to Spotify's API failed.");
 			response.end();
 		}
+
 	})
 }
 
