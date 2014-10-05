@@ -12,7 +12,7 @@ function search(response, postData) {
 		'</head>'+
 		'<body>'+
 		'<form action="/results" method="post">'+
-		'<textarea name="text" rows="20" cols="60"></textarea>'+
+		'<textarea name="text" rows="2" cols="60"></textarea>'+
 		'<input type="submit" value="Submit text" />'+
 		'</form>'+
 		'</body>'+
@@ -25,55 +25,13 @@ function search(response, postData) {
 function results(response, postData) {
 	console.log("Request handler 'results' was called.");
 	response.writeHead(200, {"Content-Type": "text/plain"});
-//	response.write("You've sent: " +
-//	querystring.parse(postData).text);
 	request('http://api.spotify.com/v1/search?q='+querystring.parse(postData).text+'&type=artist', function (error, res, body) {
 		if (!error && res.statusCode == 200) {
 			console.log("Request to Spotify's API succeeded.");
 			var obj = JSON.parse(body);
-			var final_list = JSON.stringify(obj.artists.items[0].id);
-			request('http://api.spotify.com/v1/search?q='+querystring.parse(postData).text+'&type=artist', function (error, res, body) {
-				if (!error && res.statusCode == 200) {
-					console.log("Request to Spotify's API succeeded.");
-					obj = JSON.parse(body);
-					final_list = JSON.stringify(obj.artists.items[0].id);
-					request('http://api.spotify.com/v1/search?q='+querystring.parse(postData).text+'&type=artist', function (error, res, body) {
-						if (!error && res.statusCode == 200) {
-							console.log("Request to Spotify's API succeeded.");
-							obj = JSON.parse(body);
-							final_list = JSON.stringify(obj.artists.items[0].id);
-							request('http://api.spotify.com/v1/search?q='+querystring.parse(postData).text+'&type=artist', function (error, res, body) {
-								if (!error && res.statusCode == 200) {
-									console.log("Request to Spotify's API succeeded.");
-									obj = JSON.parse(body);
-									final_list = JSON.stringify(obj.artists.items[0].id);
-									request('http://api.spotify.com/v1/search?q='+querystring.parse(postData).text+'&type=artist', function (error, res, body) {
-										if (!error && res.statusCode == 200) {
-											console.log("Request to Spotify's API succeeded.");
-											obj = JSON.parse(body);
-											final_list = JSON.stringify(obj.artists.items[0].id);
-											response.write(final_list);
-											response.end();
-										} else {
-											console.log("Request to Spotify's API failed.");
-											response.end();
-										}
-									})
-								} else {
-									console.log("Request to Spotify's API failed.");
-									response.end();
-								}
-							})
-						} else {
-							console.log("Request to Spotify's API failed.");
-							response.end();
-						}
-					})
-				} else {
-					console.log("Request to Spotify's API failed.");
-					response.end();
-				}
-			})
+			var final_list = JSON.stringify(obj.artists.items[0].name);
+			response.write(final_list);
+			response.end();
 		} else {
 			console.log("Request to Spotify's API failed.");
 			response.end();

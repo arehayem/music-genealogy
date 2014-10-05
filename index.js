@@ -3,7 +3,7 @@ var router = require("./router");
 var requestHandlers = require("./requestHandlers")
 
 var handle = {};
-handle["/"] = requestHandlers.testmongo;
+handle["/"] = requestHandlers.search;
 handle["/search"] = requestHandlers.search;
 handle["/testmongo"] = requestHandlers.testmongo;
 handle["/results"] = requestHandlers.results;
