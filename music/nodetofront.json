@@ -1,0 +1,99 @@
+{
+	"artist": {
+		"id": "abc123",
+		"name": "black sabbath",
+		"image_url": "www.example.com",
+		"popularity": 24,
+	},
+  "collaborations": [
+    {
+      "name": "DJ Alan Wolf",
+      "albums": [
+        {
+          "title": "Wolf's Physics EP",
+          "album_image": "http://www.cooper.edu/sites/default/files/imagecache/175x175/smyth1.jpg",
+          "album_popularity": 42
+        },
+        {
+          "title": "EE Department Takeover",
+          "album_image": "http://www.cooper.edu/sites/default/files/imagecache/175x175/fontaine1.jpg",
+          "album_popularity": 42
+        }
+      ]
+    },
+    {
+      "name": "Name1stCollabArtist",
+      "album": [
+        {
+          "title": "1title of the album",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+        {
+          "title": "2title of the album",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+        {
+          "title": "3title of the album",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+      ]
+    },
+    {
+      "name": "Name3rdCollabArtist",
+      "album": [
+        {
+          "title": "title of the album1",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+        {
+          "title": "title of the album2",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+        {
+          "title": "title of the album3",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+      ]
+    }
+  ],
+	"parents": [
+		{
+			"id": "FirstParent",
+			"name": "First Parent",
+			"image_url": "www.example.com",
+			"popularity": 24
+		},
+		{
+			"id": "SecondParent",
+			"name": "Second Parent",
+			"image_url": "www.example.com",
+			"popularity": 24
+		},
+    {
+			"id": "ThirdParent",
+			"name": "Third Parent",
+			"image_url": "www.example.com",
+			"popularity": 24
+		}
+	],
+	"children": [
+		{
+			"id": "FirstChild",
+			"name": "First Child",
+			"image_url": "www.example.com",
+			"popularity": 24
+		},
+		{
+			"id": "SecondChild",
+			"name": "Second Child",
+			"image_url": "www.example.com",
+			"popularity": 24
+		}
+	]
+}

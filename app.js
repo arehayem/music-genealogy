@@ -1,11 +1,5 @@
 var http = require("http");
 var url = require("url");
-var mongojs = require("mongojs");
-
-//establish connection with database
-var databaseUrl = "test";
-var collections = ["testData"];
-db = mongojs.connect(databaseUrl, collections);
 
 function start(route, handle) {
   function onRequest(request, response) {

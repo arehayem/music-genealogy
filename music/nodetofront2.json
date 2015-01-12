@@ -1,0 +1,124 @@
+{
+	"artist": {
+		"id": "abc123",
+		"name": "black sabbath",
+		"image_url": "www.example.com",
+		"popularity": 24,
+	},
+  "collaborations": [
+    {
+      "name": "Name1stCollabArtist",
+      "album": [
+        {
+          "title": "1title of the album",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+        {
+          "title": "2title of the album",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+        {
+          "title": "3title of the album",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+      ]
+    },
+    {
+      "name": "Name2ndCollabArtist",
+      "album": [
+        {
+          "title": "title of the album1",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+        {
+          "title": "title of the album2",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+        {
+          "title": "title of the album3",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+      ]
+    },
+    {
+      "name": "Name3rdCollabArtist",
+      "album": [
+        {
+          "title": "title of the album1",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+        {
+          "title": "title of the album2",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+        {
+          "title": "title of the album3",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+      ]
+    },
+    {
+      "name": "Name4thCollabArtist",
+      "album": [
+        {
+          "title": "title of the album1",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+        {
+          "title": "title of the album2",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+        {
+          "title": "title of the album3",
+          "album_image": "www.example.com",
+          "album_popularity": 42
+        },
+      ]
+    }
+  ],
+	"parents": [
+		{
+			"id": "2FirstParent",
+			"name": "2First Parent",
+			"image_url": "www.example.com",
+			"popularity": 24
+		},
+		{
+			"id": "2SecondParent",
+			"name": "2Second Parent",
+			"image_url": "www.example.com",
+			"popularity": 24
+		},
+    {
+			"id": "2ThirdParent",
+			"name": "2Third Parent",
+			"image_url": "www.example.com",
+			"popularity": 24
+		}
+	],
+	"children": [
+		{
+			"id": "F2irstChild",
+			"name": "2First Child",
+			"image_url": "www.example.com",
+			"popularity": 24
+		},
+		{
+			"id": "S2econdChild",
+			"name": "Se2cond Child",
+			"image_url": "www.example.com",
+			"popularity": 24
+		}
+	]
+}

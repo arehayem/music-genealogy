@@ -1,0 +1,6 @@
+{
+  "parents": [
+    { id: "Bread", name: "Alan Wolf", image_url: "http://www.cooper.edu/sites/default/files/imagecache/175x175/wolf1.jpg", "popularity": ""},
+    { id: "Meatloaf", name: "Fred Fontaine", image_url: "http://www.cooper.edu/sites/default/files/imagecache/175x175/fontaine1.jpg", "popularity": ""}
+  ]
+}

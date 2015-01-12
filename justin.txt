@@ -1,0 +1,147 @@
+{
+"artist": [
+{
+"id": "1YEGETLT2p8k97LIo3deHL",
+"name": "Crash Test Dummies",
+"image_url": "https://i.scdn.co/image/5d6119960dcc6c9da93cbb8b5d9cf0673e63e5d6",
+"popularity": 46
+}
+],
+"collaborations": [
+{
+"id": "4WEngLwjeu7FBLX8Ws2uka",
+"name": "Ellen Reid",
+"image_url": "",
+"albums": [
+{
+"id": "3plTAiFlYueW8znmTvpQfx",
+"title": "Four Hits: Crash Test Dummies",
+"image_url": "https://i.scdn.co/image/ec3b773bf1d68cf68224156ad1300dff8b5c06b8",
+"popularity": 43,
+"tracks": [
+{
+"id": "0OtEWV8qDKxfsCBns0qb4m",
+"name": "The Ballad Of Peter Pumpkinhead"
+}
+]
+},
+{
+"id": "7v7kVZUbo0O5kzBR7Q6bjA",
+"title": "Dumb & Dumber",
+"image_url": "https://i.scdn.co/image/afd2af250041bfdb5130f16616f8bcb50574670c",
+"popularity": 50,
+"tracks": [
+{
+"id": "1NM2ME1gnJpVJjd09XSSrh",
+"name": "The Ballad Of Peter Pumpkinhead"
+}
+]
+}
+]
+}
+],
+"parents": [
+{
+"id": "046wtejcUX9rhlzw2nlveT",
+"name": "The Soft Boys",
+"image_url": "https://i.scdn.co/image/f18a126ed2ed0a835f229193aa165244b7ce30ff"
+},
+{
+"id": "0rpMdBzQXf7aYRnu5fDBJy",
+"name": "Violent Femmes",
+"image_url": "https://i.scdn.co/image/eb2d54ec6305357682894b8f3a7749e9beff5484"
+},
+{
+"id": "1LZEQNv7sE11VDY3SdxQeN",
+"name": "Bee Gees",
+"image_url": "https://i.scdn.co/image/0f8b8e31852c637657f1495a6f86b2bff150bcc1"
+},
+{
+"id": "1SQRv42e4PjEYfPhS0Tk9E",
+"name": "The Kinks",
+"image_url": "https://i.scdn.co/image/d401f647a39eeeb589d1fb6fcb3ef2905f774dd0"
+},
+{
+"id": "2CvCyf1gEVhI0mX6aFXmVI",
+"name": "Paul Simon",
+"image_url": "https://i.scdn.co/image/c0b4f153302d1a9b435e2e331efc3e64ad6b47d6"
+},
+{
+"id": "3M8NUieZuEOMs0Hf210w4n",
+"name": "Van Dyke Parks",
+"image_url": "https://i.scdn.co/image/6f3a7437923afe5f8505f7f3edd16d7dc595a518"
+},
+{
+"id": "3oDbviiivRWhXwIE8hxkVV",
+"name": "The Beach Boys",
+"image_url": "https://i.scdn.co/image/db3c43be15f3401e2de7e69c524ddc5751ba55a3"
+},
+{
+"id": "3UvcmAOZt64oKpP95f6MMM",
+"name": "Big Star",
+"image_url": "https://i.scdn.co/image/2aaf14599a0c15f5b34591a999090799ae69633f"
+},
+{
+"id": "4KWTAlx2RvbpseOGMEmROg",
+"name": "R.E.M.",
+"image_url": "https://i.scdn.co/image/5d3c8cd5d595588b0dfca1ae55a7a144cc695abe"
+},
+{
+"id": "5Y4g6bsYzlhsC6jRDQnN4a",
+"name": "Edie Brickell",
+"image_url": "https://i.scdn.co/image/ad3c6b51d94db45c975458412f935fb0ccb6b1c9"
+},
+{
+"id": "6zB02lwP6L6ZH32nggQiJT",
+"name": "They Might Be Giants",
+"image_url": "https://i.scdn.co/image/72312bcc7e47ebac3eb58f94b6b9d59a4e1b7f02"
+},
+{
+"id": "7ohlPA8dRBtCf92zaZCaaB",
+"name": "Crowded House",
+"image_url": "https://i.scdn.co/image/6b281313cee85e9dbfaff6fe69eef81446aebcb0"
+}
+],
+"children": [
+{
+"id": "1Cq0LAHFfvUTBEtMPXUidI",
+"name": "O.A.R.",
+"image_url": "https://i.scdn.co/image/ffc3fabb498341b703fd7f4d68848643d4f4d53a"
+},
+{
+"id": "1x1NsoNPyVy6FlgSLSovSk",
+"name": "Chantal Kreviazuk",
+"image_url": "https://i.scdn.co/image/9752c1a0c027fe8bda67d7417758d6a57680eb03"
+},
+{
+"id": "244fcyNSuyhbRlMGfMbYrO",
+"name": "Badly Drawn Boy",
+"image_url": "https://i.scdn.co/image/acab32ec59aace6ad69795e58be1a017e8483896"
+},
+{
+"id": "3GBPw9NK25X1Wt2OUvOwY3",
+"name": "Jack Johnson",
+"image_url": "https://i.scdn.co/image/0fac98876e10bb1d62877bf0a881318c0a35e32f"
+},
+{
+"id": "3rIZMv9rysU7JkLzEaC5Jp",
+"name": "Snow Patrol",
+"image_url": "https://i.scdn.co/image/aa984364fa579653c24a0098eab744414498d4cc"
+},
+{
+"id": "3uT7nEkZwWc2GBiqUZGoOe",
+"name": "Aqualung",
+"image_url": "https://i.scdn.co/image/dc146ab7c319a80582f7ed20bfb53c0313deb4e3"
+},
+{
+"id": "6pwHWKweuoCyx3OoFaD0Q5",
+"name": "The Weepies",
+"image_url": "https://i.scdn.co/image/4f8470ce2205219bf3fecc51861364c798fc7fb1"
+},
+{
+"id": "6Xb4ezwoAQC4516kI89nWz",
+"name": "Imogen Heap",
+"image_url": "https://i.scdn.co/image/0961373f9b7bde17fedc759016ac0c13320b8d2a"
+}
+]
+}

@@ -1,0 +1,88 @@
+{
+	"artist": {
+		"id": "abc123",
+		"name": "black sabbath",
+		"image_url": "www.example.com",
+		"popularity": 24
+	},
+	"collaborations": [
+			{
+				"name": "some artist they collaborated with",
+				"albums": [
+					{
+						"title": "the album title",
+						"image_url": "image",
+						"popularity ":"popular",
+						"tracks": [
+							{
+								"name": "track name",
+								"popularity ":"popular"
+							},
+							{
+								"name": "track name",
+								"popularity ":"popular"
+							}
+						]
+					},
+					{
+						"title": "the album title",
+						"image_url": "image",
+						"popularity ":"popular",
+						"tracks": [
+							{
+								"name": "track name",
+								"popularity ":"popular"
+							},
+							{
+								"name": "track name",
+								"popularity ":"popular"
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "some artist they collaborated with",
+				"albums": [
+					{
+					"title": "the album title",
+					"image_url": "image",
+					"popularity ":"popular"
+					},
+					{
+					"title": "the album title",
+					"image_url": "image",
+					"popularity ":"popular"
+					}
+				]
+			}
+	],	
+	"parents": [
+		{
+			"id": "abc123",
+			"name": "i dont know my parents",
+			"image_url": "www.example.com",
+			"popularity": 24
+		},
+		{
+			"id": "abc123",
+			"name": "am i batman",
+			"image_url": "www.example.com",
+			"popularity": 24
+		}
+	],
+	"children": [
+		{
+			"id": "abc123",
+			"name": "First child",
+			"image_url": "www.example.com",
+			"popularity": 24
+		},
+		{
+			"id": "abc123",
+			"name": "Another child",
+			"image_url": "www.example.com",
+			"popularity": 24
+		}
+	]
+}

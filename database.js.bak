@@ -1,0 +1,86 @@
+var mysql = require("mysql");
+
+//Inserts into the DB all artists contained in the JSON object
+function db_addArtist(data, html) {
+	var artistList = [];
+	for(var i in data.artists.items) {
+		var id = JSON.stringify(data.artists.items[i].id).replace(/\"/g, "");
+		var name = JSON.stringify(data.artists.items[i].name).replace(/\"/g, "");
+		var pop = JSON.stringify(data.artists.items[i].popularity);
+		var url = data.artists.items[i].images.length > 0 ? JSON.stringify(data.artists.items[i].images[0].url).replace(/\"/g, "") : 'NULL';
+		artistList.push([id, url, pop, name]);
+		html.write(name.replace(/\"/g, "")+'<br>');
+	}
+	var db = db_start();
+	var qString = 'INSERT IGNORE INTO Artists(id, image_url, popularity, name) VALUES ?';
+	db.connect();
+	var query = db.query(qString, [artistList], function(err, results, fields) {
+		if (err) html.write(err.message);
+	});
+	db.end();
+}
+
+//Add Album to db
+function db_addAlbum(data, html) {
+	var db = db_start();
+	db.connect();
+	var url = data.images.length > 0 ? JSON.stringify(data.images[0].url) : 'NULL';
+	var qString = 'INSERT IGNORE INTO Albums(aid, image_url, popularity, title, release_date) VALUES ('+
+			JSON.stringify(data.id)+', '+url+', '+
+			JSON.stringify(data.popularity)+', '+JSON.stringify(data.name)+', '+
+			JSON.stringify(data.release_date)+')';
+	console.log(qString);
+	//Add tracks???
+	db.query(qString, function(err, results, fields) {
+		if (err) html.write(err.message);
+	});
+	db.end();
+}
+
+//Gets parents and children of the artist with the given id
+function db_getMap(data, html) { //data=id string
+	var db = db_start()
+	var text = '"artist": ';
+	//Get base info
+	qString = 'SELECT a.id, a.name, a.image_url FROM Artists a WHERE a.id = \''+data+'\'';
+	//console.log(qString);
+	db.query(qString, function(err, results, fields) {
+		if (err) html.write(err.message);
+		text += JSON.stringify(results)+',\n';
+	});
+	//Get parents
+	qString = 'SELECT a.id, a.name, a.image_url FROM Artists a INNER JOIN Influences i ON i.pid = a.id WHERE i.cid = \''+data+'\'';
+	//console.log(qString);
+	db.query(qString, function(err, results, fields) {
+		if (err) html.write(err.message);
+		text += '"parents": '+JSON.stringify(results)+',\n';
+	});
+	//Get children
+	var qString = 'SELECT a.id, a.name, a.image_url FROM Artists a INNER JOIN Influences i ON i.cid = a.id WHERE i.pid = \''+data+'\'';
+	//console.log(qString);
+	db.query(qString, function(err, results, fields) {
+		if (err) html.write(err.message);
+		text += '"children": '+JSON.stringify(results);
+		console.log(text);
+	});
+	db.end();
+}
+
+function db_start() { 
+	return mysql.createConnection(
+		{
+		  host     : 'localhost',
+		  user     : 'root',
+		  password : REDACTED,
+		  database : 'musicDB',
+		}
+	);
+}
+
+exports.db_addArtist = db_addArtist;
+<<<<<<< HEAD
+exports.db_addAlbum = db_addAlbum;
+exports.db_getMap = db_getMap;
+=======
+exports.db_getMap = db_getMap;
+>>>>>>> f1c1ddd79dfce92b2ff73a2948e38fe5f69a161f
